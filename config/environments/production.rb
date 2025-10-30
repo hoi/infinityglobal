@@ -88,12 +88,11 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
-  # Security headers
+  # Security headers (HSTS removed - handled by Cloudflare Tunnel)
   config.action_dispatch.default_headers = {
     'X-Frame-Options' => 'SAMEORIGIN',
     'X-Content-Type-Options' => 'nosniff',
     'X-XSS-Protection' => '1; mode=block',
-    'Strict-Transport-Security' => 'max-age=31536000; includeSubDomains',
     'Referrer-Policy' => 'strict-origin-when-cross-origin',
     'Permissions-Policy' => 'geolocation=(), microphone=(), camera=()'
   }
