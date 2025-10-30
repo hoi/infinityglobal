@@ -3,15 +3,14 @@
 
     <!-- Logo -->
     <%= link_to root_path, class: "flex items-center" do %>
-      <%= image_tag 'logo.png', alt: 'Infinity Global', class: 'h-8 md:h-10' %>
+      <%= image_tag 'logo_with_company_name.png', alt: 'Infinity Global', class: 'h-8 md:h-10' %>
     <% end %>
 
     <!-- Desktop Navigation -->
     <div class="hidden md:flex items-center space-x-8">
       <%= link_to 'Home', root_path, class: "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-150 #{active_link_class('/')}" %>
-      <%= link_to 'About Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-150" %>
-      <%= link_to 'Contact Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-150" %>
-      <%= link_to 'Get Started', '#', class: "bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all duration-150 font-semibold shadow-md" %>
+      <%= link_to 'About', about_path, class: "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-150 #{active_link_class('/about')}" %>
+      <%= link_to 'Contact', contact_path, class: "bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all duration-150 font-semibold shadow-md" %>
     </div>
 
     <!-- Mobile Hamburger Button -->
@@ -44,11 +43,8 @@
         <!-- Mobile Navigation Links -->
         <nav class="flex flex-col space-y-4">
           <%= link_to 'Home', root_path, class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
-          <%= link_to 'About Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
-          <%= link_to 'Contact Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
-          <%= link_to 'Terms of Service', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
-          <%= link_to 'Privacy Policy', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
-          <%= link_to 'Get Started', '#', class: "bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-150 font-semibold text-center mt-4" %>
+          <%= link_to 'About', about_path, class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
+          <%= link_to 'Contact', contact_path, class: "bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-150 font-semibold text-center mt-4" %>
         </nav>
       </div>
     </div>
