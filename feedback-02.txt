@@ -1,0 +1,6 @@
+- load my linked in, scrape logos from my experienc section add the logos to a new section on the home page as my portfolio of previous clients, but ignore the generic placeholder image for Voce and Anywire):  https://www.linkedin.com/in/hyon-lee-0b749535/details/experience/
+- for the Trusted Expertise section, change "20+ enterprise clients" to "20+ Startups to Enterprise Clients"
+- just on the home page, change "BS & MEng Graduate" to "Bachelors and Masters Degrees"
+- for the "End-to-End" section, please also add some language around building AI features
+- home page sections should be in rows
+- contact page loosk really empty and also is very short on large screens

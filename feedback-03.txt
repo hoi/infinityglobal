@@ -1,0 +1,5 @@
+- the home page still isn't displaying the sections as individual rows.  please force them to stack one above another not side-by-side
+- add a new testimonials section at the bottom of the home page and hydrate with realistic testimonials until I replace them with real ones.  display them as horizontally auto-scrolling carousel
+- Make sure the copyright year on the footer auto-updates using date function so it always stays current
+- the ToS and Privacy Policy links in the footer don't seem to work
+- change the language on the about us page to say "20+ clients of all stages from early stage startups to enterprise"

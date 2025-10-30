@@ -1,0 +1,4 @@
+- logo in header should use the version with the company name
+- clicking get started button in header doesn't do anything;  in fact, remove that button, and style the Contact Us link as the buttom (CTA) instead
+- It seems like the sections should be displayed in rows, but they are currently displayed as columns, which then squeezes the content into super thin elements
+- let's remove the address and phone number from the Contact info in the footer and anywhere else it's displayed.  only use the email address as contact info
