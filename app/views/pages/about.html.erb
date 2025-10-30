@@ -15,14 +15,22 @@
 
     <!-- Founded on Excellence Section -->
     <section class="mb-16">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">Founded on Excellence</h2>
-      <div class="prose prose-lg max-w-none">
-        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-          Infinity Global was founded in 2009 by <strong>Hyon Lee</strong>, who holds both a Bachelor of Science and Master of Engineering degree from MIT. With deep technical expertise and a passion for solving complex engineering challenges, Hyon established Infinity Global to deliver world-class software consulting services.
-        </p>
-        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-          Since our founding, we've proudly served <strong>20+ large enterprise clients</strong> as well as numerous boutique firms, delivering innovative solutions across industries.
-        </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Founded on Excellence</h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              Infinity Global was founded in 2009 by <strong>Hyon Lee</strong>, who holds both a Bachelor of Science and Master of Engineering degree from MIT. With deep technical expertise and a passion for solving complex engineering challenges, Hyon established Infinity Global to deliver world-class software consulting services.
+            </p>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              Since our founding, we've proudly served <strong>20+ large enterprise clients</strong> as well as numerous boutique firms, delivering innovative solutions across industries.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <%= image_tag 'about-team.jpg', alt: 'Team collaboration on software projects', class: 'w-full rounded-xl shadow-lg object-cover h-64', loading: 'lazy' %>
+          <%= image_tag 'about-office.jpg', alt: 'Professional office environment', class: 'w-full rounded-xl shadow-lg object-cover h-48', loading: 'lazy' %>
+        </div>
       </div>
     </section>
 
