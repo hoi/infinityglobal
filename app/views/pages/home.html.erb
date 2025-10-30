@@ -1,53 +1,76 @@
-<div class="container mx-auto px-4 py-16">
-  <!-- Hero Section -->
-  <section class="text-center py-20">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-      Infinity Global
+<!-- Hero Section -->
+<section class="bg-gradient-to-b from-blue-50 to-white">
+  <div class="container mx-auto px-4 py-24 md:py-32 text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+      Expert Software Engineering Consulting
     </h1>
-    <p class="text-xl md:text-2xl text-gray-600 mb-8">
-      Expert Software Engineering Consulting Since 2009
+    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+      MIT-founded expertise delivering end-to-end solutions from brainstorming to deployment
     </p>
-    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-      We deliver world-class software engineering solutions tailored to your business needs.
-      From greenfield projects to legacy system modernization, our team of experienced engineers
-      brings technical excellence and strategic insight to every engagement.
-    </p>
-    <div class="flex justify-center gap-4">
-      <%= link_to 'Learn More', about_path, class: 'bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-150' %>
-      <%= link_to 'Contact Us', contact_path, class: 'bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors duration-150' %>
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+      <%= link_to 'Get Started Today', contact_path, class: 'bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 hover:scale-105 transition-all duration-150 shadow-lg hover:shadow-xl' %>
+      <%= link_to 'Learn More', about_path, class: 'bg-white text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors duration-150 shadow-md border border-gray-200' %>
     </div>
-  </section>
+    <p class="text-base text-gray-600 max-w-2xl mx-auto">
+      Trusted by forward-thinking companies since 2009 to deliver scalable, high-performance solutions
+    </p>
+  </div>
+</section>
+
+<div class="container mx-auto px-4 py-16">
 
   <!-- Services Overview -->
-  <section class="py-16">
-    <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Service 1 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <div class="text-blue-600 text-4xl mb-4">🚀</div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Custom Development</h3>
+  <section class="py-16 md:py-24">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
+      End-to-End Software Engineering Services
+    </h2>
+    <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+      From initial brainstorming to production deployment and beyond, we deliver comprehensive solutions at every stage of your project.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <!-- Service 1: Strategic Planning & Architecture -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Strategic Planning & Architecture</h3>
         <p class="text-gray-600">
-          Build scalable, high-performance applications tailored to your unique requirements.
+          Expert guidance from brainstorming through technical architecture design, ensuring your project starts on the right foundation.
         </p>
       </div>
 
-      <!-- Service 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <div class="text-blue-600 text-4xl mb-4">🔧</div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">System Modernization</h3>
+      <!-- Service 2: Full-Stack Development -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Full-Stack Development</h3>
         <p class="text-gray-600">
-          Transform legacy systems into modern, maintainable architectures.
+          End-to-end implementation with modern technologies and industry best practices, delivering scalable and maintainable solutions.
         </p>
       </div>
 
-      <!-- Service 3 -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <div class="text-blue-600 text-4xl mb-4">💡</div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">Technical Consulting</h3>
+      <!-- Service 3: Testing & Deployment -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Testing & Deployment</h3>
         <p class="text-gray-600">
-          Strategic guidance from seasoned engineers to accelerate your projects.
+          Comprehensive QA, deployment automation, and 6-month post-deployment support to ensure long-term success.
         </p>
       </div>
+    </div>
+
+    <!-- Secondary CTA -->
+    <div class="text-center">
+      <%= link_to about_path, class: 'inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-lg group' do %>
+        Learn More About Our Process
+        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      <% end %>
     </div>
   </section>
 
