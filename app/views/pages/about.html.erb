@@ -1,34 +1,62 @@
+<!-- Hero Section -->
+<section class="bg-gradient-to-b from-blue-50 to-white">
+  <div class="container mx-auto px-4 py-16 md:py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      About Infinity Global
+    </h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      MIT-founded software engineering consulting delivering excellence since 2009
+    </p>
+  </div>
+</section>
+
 <div class="container mx-auto px-4 py-16">
   <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-gray-900 mb-6">About Infinity Global</h1>
 
-    <div class="prose prose-lg max-w-none">
-      <p class="text-lg text-gray-700 mb-6">
-        Founded in 2009, Infinity Global has been at the forefront of software engineering innovation,
-        delivering exceptional solutions to clients worldwide.
-      </p>
+    <!-- Founded on Excellence Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Founded on Excellence</h2>
+      <div class="prose prose-lg max-w-none">
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          Infinity Global was founded in 2009 by <strong>Hyon Lee</strong>, who holds both a Bachelor of Science and Master of Engineering degree from MIT. With deep technical expertise and a passion for solving complex engineering challenges, Hyon established Infinity Global to deliver world-class software consulting services.
+        </p>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          Since our founding, we've proudly served <strong>20+ large enterprise clients</strong> as well as numerous boutique firms, delivering innovative solutions across industries.
+        </p>
+      </div>
+    </section>
 
-      <h2 class="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
-      <p class="text-gray-700 mb-6">
+    <!-- Our Mission Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
         To empower businesses through cutting-edge software engineering practices, delivering solutions
         that drive growth, efficiency, and competitive advantage.
       </p>
+    </section>
 
-      <h2 class="text-2xl font-semibold text-gray-900 mb-4">Our Expertise</h2>
-      <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+    <!-- Our Expertise Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Expertise</h2>
+      <ul class="list-disc list-inside text-lg text-gray-700 space-y-3">
         <li>Full-stack application development</li>
         <li>Cloud infrastructure and DevOps</li>
         <li>Microservices architecture</li>
         <li>Legacy system modernization</li>
         <li>Technical leadership and consulting</li>
       </ul>
+    </section>
 
-      <div class="bg-blue-50 p-6 rounded-lg mt-8">
-        <p class="text-gray-700">
-          Ready to learn more about how we can help your business?
-          <%= link_to 'Contact us today', contact_path, class: 'text-blue-600 hover:text-blue-700 font-semibold' %>.
-        </p>
-      </div>
+    <!-- CTA Section -->
+    <div class="bg-blue-50 rounded-xl p-8 md:p-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Ready to Learn More?
+      </h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Discover how we can help your business achieve its goals.
+      </p>
+      <%= link_to 'Contact Us Today', contact_path, class: 'bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 hover:scale-105 transition-all duration-150 inline-block shadow-lg' %>
     </div>
+
   </div>
 </div>
