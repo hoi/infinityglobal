@@ -1,0 +1,27 @@
+a professional website of a software engineering consulting company named infinity global.  website url: infinityglobalcorp.com email: [can be anything here because i set up catch-all]@infinityglobalcorp.com
+
+other info:
+1309 Coffeen Avenue STE 1200
+Sheridan, Wyoming 82801 USA
+Tel: +1 617-460-4451
+
+
+it should have a great call to action on the homepage that leads to a contact us page with instructions on how to reach via phone or email.
+
+also include a generic terms of service page, about us page and privacy page. 
+
+about us page (or other pages as appropriate) should include the following info:
+- company founded by Hyon Lee in 2009 who received BS and MEng from MIT.
+- have provideed services to 20+ large clients as well as many more boutique firms.
+- team of experts walk through end-to-end process of brainstorming, design/architecting, project planning, developing, testing and deployment. with additional after-sale services (generally free) to help maintain and fix minor issues for 6 months after initial deployment.
+
+please pull in stock images to help make the site look nicer.  you can find the logo and logo with company name on the root level (feel free to move it to public dir for access)
+
+tech stack:
+
+ruby on rails with tailwindcss for modern-feel.  no need for database as these are static pages, and also no need for client app (ex. react app) and simply use rails templates.
+deploymeny via docker-compose on a VM, but use a random, unique port number to avoid clash with other apps running on the same VM
+
+emails should have mail to, and phone number should use tel links.
+
+make the design mobile-friendly.
