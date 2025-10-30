@@ -1,0 +1,84 @@
+<header class="fixed top-0 w-full bg-white shadow-md z-50">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <%= link_to root_path, class: "flex items-center" do %>
+      <span class="text-2xl font-bold text-blue-600">Infinity Global</span>
+    <% end %>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center space-x-8">
+      <%= link_to 'Home', root_path, class: "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-150 #{active_link_class('/')}" %>
+      <%= link_to 'About Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-150" %>
+      <%= link_to 'Contact Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-150" %>
+      <%= link_to 'Get Started', '#', class: "bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all duration-150 font-semibold shadow-md" %>
+    </div>
+
+    <!-- Mobile Hamburger Button -->
+    <button
+      id="mobile-menu-button"
+      class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-600 rounded"
+      aria-label="Toggle menu"
+      type="button">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-black bg-opacity-50 z-40">
+    <div class="absolute right-0 top-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-250">
+      <div class="p-4">
+        <!-- Close Button -->
+        <button
+          id="mobile-menu-close"
+          class="mb-8 p-2 focus:outline-none focus:ring-2 focus:ring-blue-600 rounded"
+          aria-label="Close menu"
+          type="button">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <!-- Mobile Navigation Links -->
+        <nav class="flex flex-col space-y-4">
+          <%= link_to 'Home', root_path, class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
+          <%= link_to 'About Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
+          <%= link_to 'Contact Us', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
+          <%= link_to 'Terms of Service', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
+          <%= link_to 'Privacy Policy', '#', class: "text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors duration-150" %>
+          <%= link_to 'Get Started', '#', class: "bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-150 font-semibold text-center mt-4" %>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeButton = document.getElementById('mobile-menu-close');
+
+    if (menuButton && mobileMenu && closeButton) {
+      // Open menu
+      menuButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('hidden');
+      });
+
+      // Close menu
+      closeButton.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+      });
+
+      // Close menu when clicking overlay
+      mobileMenu.addEventListener('click', function(e) {
+        if (e.target === mobileMenu) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>

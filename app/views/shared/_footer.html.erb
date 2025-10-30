@@ -1,0 +1,54 @@
+<footer class="bg-gray-900 text-white py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Infinity Global</h3>
+        <p class="text-gray-400">
+          Expert software engineering consulting since 2009
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <nav class="flex flex-col space-y-2">
+          <%= link_to 'Home', root_path, class: "text-gray-400 hover:text-white transition-colors duration-150" %>
+          <%= link_to 'About Us', '#', class: "text-gray-400 hover:text-white transition-colors duration-150" %>
+          <%= link_to 'Contact Us', '#', class: "text-gray-400 hover:text-white transition-colors duration-150" %>
+        </nav>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+        <address class="text-gray-400 not-italic space-y-2">
+          <p>1309 Coffeen Avenue STE 1200</p>
+          <p>Sheridan, Wyoming 82801 USA</p>
+          <p>
+            <a href="tel:+16174604451" class="hover:text-white transition-colors duration-150">
+              +1 617-460-4451
+            </a>
+          </p>
+          <p>
+            <a href="mailto:contact@infinityglobalcorp.com" class="hover:text-white transition-colors duration-150">
+              contact@infinityglobalcorp.com
+            </a>
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-sm mb-4 md:mb-0">
+        &copy; <%= Time.current.year %> Infinity Global. All rights reserved.
+      </p>
+      <nav class="flex space-x-6">
+        <%= link_to 'Terms of Service', '#', class: "text-gray-400 hover:text-white text-sm transition-colors duration-150" %>
+        <%= link_to 'Privacy Policy', '#', class: "text-gray-400 hover:text-white text-sm transition-colors duration-150" %>
+      </nav>
+    </div>
+  </div>
+</footer>
