@@ -74,14 +74,42 @@
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="py-16 text-center">
-    <div class="bg-blue-50 rounded-lg p-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-      <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-        Let's discuss how we can help transform your software engineering challenges into opportunities.
-      </p>
-      <%= link_to 'Get in Touch', contact_path, class: 'bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-150 inline-block' %>
-    </div>
-  </section>
 </div>
+
+<!-- Credibility / Stats Section -->
+<section class="bg-blue-600 text-white py-16 md:py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Trusted Expertise Since 2009
+    </h2>
+    <p class="text-xl text-blue-100 text-center mb-12 max-w-3xl mx-auto">
+      Delivering exceptional results for enterprise clients worldwide
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center mb-12">
+      <!-- Stat 1: Enterprise Clients -->
+      <div>
+        <div class="text-5xl md:text-6xl font-bold mb-2">20+</div>
+        <div class="text-xl text-blue-100">Enterprise Clients</div>
+      </div>
+
+      <!-- Stat 2: MIT Founded -->
+      <div>
+        <div class="text-5xl md:text-6xl font-bold mb-2">MIT</div>
+        <div class="text-xl text-blue-100">Founded 2009</div>
+        <div class="text-sm text-blue-200 mt-1">BS & MEng Graduate</div>
+      </div>
+
+      <!-- Stat 3: Support Included -->
+      <div>
+        <div class="text-5xl md:text-6xl font-bold mb-2">6 Mo</div>
+        <div class="text-xl text-blue-100">Support Included</div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="text-center">
+      <%= link_to 'Contact Us Today', contact_path, class: 'bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors duration-150 inline-block shadow-lg' %>
+    </div>
+  </div>
+</section>
