@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= content_for(:title) || "Infinityglobal" %></title>
+    <title><%= content_for(:title) || "Infinity Global - Expert Software Engineering Consulting Since 2009" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="<%= content_for(:description) || "MIT-founded software engineering consulting delivering end-to-end solutions from brainstorming to deployment. Trusted by 20+ enterprise clients since 2009." %>">
+    <meta name="keywords" content="software engineering, consulting, MIT, full-stack development, architecture design, enterprise solutions">
+    <meta name="author" content="Infinity Global">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Infinityglobal">
+    <meta name="application-name" content="Infinity Global">
     <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= content_for(:og_title) || content_for(:title) || "Infinity Global - Expert Software Engineering Consulting" %>">
+    <meta property="og:description" content="<%= content_for(:og_description) || content_for(:description) || "MIT-founded consulting delivering end-to-end software solutions since 2009" %>">
+    <meta property="og:image" content="<%= image_url('logo_with_company_name.png') %>">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:site_name" content="Infinity Global">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= content_for(:og_title) || content_for(:title) || "Infinity Global" %>">
+    <meta name="twitter:description" content="<%= content_for(:og_description) || content_for(:description) || "Expert Software Engineering Consulting" %>">
+    <meta name="twitter:image" content="<%= image_url('logo_with_company_name.png') %>">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -19,6 +38,41 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Infinity Global",
+      "url": "<%= root_url %>",
+      "logo": "<%= image_url('logo_with_company_name.png') %>",
+      "description": "MIT-founded software engineering consulting delivering end-to-end solutions from brainstorming to deployment",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1309 Coffeen Avenue STE 1200",
+        "addressLocality": "Sheridan",
+        "addressRegion": "WY",
+        "postalCode": "82801",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-617-460-4451",
+        "contactType": "Customer Service",
+        "email": "contact@infinityglobalcorp.com"
+      },
+      "foundingDate": "2009",
+      "founder": {
+        "@type": "Person",
+        "name": "Hyon Lee",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Massachusetts Institute of Technology"
+        }
+      }
+    }
+    </script>
   </head>
 
   <body>
