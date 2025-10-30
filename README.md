@@ -136,59 +136,44 @@ infinityglobal/
 └── .env.example        # Environment variable template
 ```
 
-## Deployment to Production VM
+## Deployment to Production
 
-### 1. SSH to Your VM
+For detailed production deployment instructions including:
+- SSL/HTTPS configuration with Let's Encrypt or Caddy
+- Nginx or Caddy reverse proxy setup
+- Security hardening
+- Monitoring and troubleshooting
+- Update procedures
+
+**See: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**
+
+### Quick Deployment
 
 ```bash
+# 1. SSH to your VM
 ssh user@your-vm-address
-```
 
-### 2. Clone Repository
-
-```bash
+# 2. Clone repository
 git clone <repository-url>
 cd infinityglobal
-```
 
-### 3. Configure Environment
-
-```bash
+# 3. Configure environment
 cp .env.example .env
-nano .env  # Edit with your production values
-```
+nano .env  # Edit with production values
 
-Generate secret key:
-```bash
+# 4. Generate secret key
 docker-compose run --rm web bin/rails secret
-```
+# Copy output to SECRET_KEY_BASE in .env
 
-### 4. Build and Run
-
-```bash
-docker-compose up -d
-```
-
-### 5. Verify Deployment
-
-```bash
-# Check container status
-docker-compose ps
-
-# View logs
-docker-compose logs -f web
-
-# Test health endpoint
-curl http://localhost:3847/up
-```
-
-### 6. Updates and Redeployment
-
-```bash
-git pull
+# 5. Build and start
 docker-compose build
 docker-compose up -d
+
+# 6. Verify
+curl http://localhost:3847
 ```
+
+For SSL/HTTPS setup and complete production configuration, see [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Docker Commands Reference
 
@@ -243,10 +228,15 @@ Assets (CSS from Tailwind) are precompiled during the Docker build process. For 
 
 ## Security
 
-- Dockerfile creates a non-root user (`rails`) for security
-- Multi-stage build reduces final image size
-- Environment variables keep secrets out of source code
-- `.gitignore` excludes `.env`, `tmp/`, `log/`, and other sensitive files
+- **Production Security Headers**: HSTS, X-Frame-Options, X-Content-Type-Options, CSP configured
+- **Force SSL**: Production environment forces HTTPS connections
+- **Secret Management**: Environment variables keep secrets out of source code
+- **Docker Security**: Non-root user (`rails`) for container execution
+- **Image Optimization**: Multi-stage build reduces final image size and attack surface
+- **Git Security**: `.gitignore` excludes `.env`, `tmp/`, `log/`, and sensitive files
+- **SEO & Privacy**: robots.txt and privacy policy configured
+
+For complete security configuration and SSL setup, see [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Support
 
